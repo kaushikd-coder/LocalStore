@@ -87,7 +87,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     validateBeforeSave: false,
   });
 
-  // const resetPasswordUrl = `http://localhost:3000/password/reset/${resetToken}`; 
+  // const resetPasswordUrl = `http://localhost/password/reset/${resetToken}`; 
   const resetPasswordUrl = `${req.protocol}://${req.get(
     "host"
   )}/password/reset/${resetToken}`;
@@ -191,7 +191,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
     email: req.body.email,
   };
 
-  // we will add cloudnary Later on
+  // Avatar_Update_Cloudinary__
   if (req.body.avatar !== "") {
     const user = await User.findById(req.user.id);
 

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 
-const ProtectedRoute = ({isAdmin, children }) => {
+const ProtectedRoute = ({ children }) => {
  
   // const [loading , setLoading ] = useState(true);
   // const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -25,7 +25,7 @@ const ProtectedRoute = ({isAdmin, children }) => {
         <Fragment>
         
               {isAuthenticated ? children : <Navigate to="/login" /> }
-           
+              
             
         </Fragment>
       )}

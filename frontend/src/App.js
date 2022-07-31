@@ -79,7 +79,6 @@ function App() {
           element={
             <ProtectedRoute>
               <Elements stripe={loadStripe(stripeApiKey)}>
-                {" "}
                 <Payment />
               </Elements>
             </ProtectedRoute>
@@ -98,8 +97,7 @@ function App() {
           path="/account"
           element={
             <ProtectedRoute>
-              {" "}
-              <Profile />{" "}
+              <Profile />
             </ProtectedRoute>
           }
         />
